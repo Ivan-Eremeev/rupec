@@ -1,0 +1,32 @@
+@import 'mixins/mixins';
+
+@include reset(); // Сброс стилей
+
+// Переменные для кастомизации Bootstrap 4
+$grid-gutter-width: 20px; // Отступы между колонками
+$grid-columns: 12; // Колличество колонок
+$grid-breakpoints: (xs: 0, sm: 576px, md: 768px, lg: 992px, xl: 1300px); // Брэйкпоинты
+$container-max-widths: (sm: 540px, md: 720px, lg: 960px, xl: 1220px); // Максимальная ширина контейнера
+$gutter: $grid-gutter-width; // Переменная для задания отступов равных междуколоночным
+@import 'bootstrap/bootstrap';
+
+// Шрифты
+@include font-face("Montserrat", "../fonts/Montserrat/Montserrat-Regular", normal, normal);
+@include font-face("Montserrat", "../fonts/Montserrat/Montserrat-Medium", 500, normal);
+@include font-face("Montserrat", "../fonts/Montserrat/Montserrat-SemiBold", 600, normal);
+@include font-face("Montserrat", "../fonts/Montserrat/Montserrat-ExtraBold", 700, normal);
+
+// Цвета
+$blue: #2073BA;
+$orange: #F57B20;
+$red: #DA4052;
+
+// Подключение файлов
+@import 'blocks/settings';
+@import 'hamburgers/hamburgers';
+@import 'blocks/header';
+@import 'blocks/menu';
+// @import 'blocks/mmenu';
+// @import 'blocks/modal';
+// @import 'blocks/tooltipster-noir';
+// @import 'blocks/tabs';
