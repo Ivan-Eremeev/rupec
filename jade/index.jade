@@ -14,6 +14,10 @@ block style-libs
 	//- link(rel="stylesheet", href="css/libs/tooltipster.bundle.min.css")
 	//- link(rel="stylesheet", href="css/libs/aos.css")
 
+include blocks/little-news.jade
+include blocks/big-news.jade
+include blocks/comment-news.jade
+
 block content
 
 	.page
@@ -23,7 +27,23 @@ block content
 		.content
 			.container
 
-				
+				section.home-s1
+					.row.row-cols-1.row-cols-md-3
+						.col
+							+little-news('госрегулирование','“Есть ли жизнь без пластика? ”главное из общения<br>в Clubhouse с главой СИБУР<br>Дмитрием Коновым','4 часа назад')
+						.col
+							+little-news('Стратегии отрасли','СПП выступил против возобновления пошлинына термопластавтоматы','8 часов назад')
+						.col
+							+little-news('Стратегии отрасли','Производство натурального каучука в феврале сократилось на 12,4%','вчера')
+
+				section.home-s2
+					.row.row-cols-1.row-cols-md-2.row-cols-lg-3
+						.col
+							+big-news('госрегулирование','“Есть ли жизнь без пластика? ”главное из общения<br>в Clubhouse с главой СИБУР<br>Дмитрием Коновым','4 часа назад','news-thumbnail_1.jpg')
+						.col
+							+comment-news('госрегулирование','“Есть ли жизнь без пластика? ”главное из общения<br>в Clubhouse с главой СИБУР<br>Дмитрием Коновым','4 часа назад','portrait.jpg')
+						.col
+							+big-news('госрегулирование','Биржевая цена на суг обновила исторический максимум','11:25 / 4 МАРТА 2021','news-thumbnail_2.jpg')
 			
 		include blocks/footer.jade
 

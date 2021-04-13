@@ -1,0 +1,11 @@
+mixin little-news(category,title,time,img)
+  // little-news
+  article.little-news.little-news--white
+    a(href="#") 
+      if img
+        img(src="img/" + img, alt="")
+      span.little-news__category= category
+      h1.little-news__title
+        span!= title
+      time.little-news__time= time
+  //	/little-news

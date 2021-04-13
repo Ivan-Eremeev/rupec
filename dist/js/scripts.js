@@ -27,47 +27,32 @@ $(document).ready(function () {
 		e.preventDefault();
 	});
 
-	// Мобильное меню
-	function myMenu(menu) {
-		if (menu.length) {
-			menu.each(function () {
+	// Выпадайка при клике
+	function dropClick(btn) {
+		if (btn.length) {
+			btn.each(function () {
 				var $this = $(this),
-						menuBtn = $this.find('#menu-btn'),
-						over = $this.find('#menu-over'),
-						close = $this.find('#menu-close'),
-						body = $('body'),
-						scrollbarWidth;
-				menuBtn.on('click', toggleOpenMenu);
-				over.on('click', menuClose);
-				close.on('click', menuClose);
-				function menuOpen() { // Открывание меню
-					body.addClass('lock').css('padding-right', scrollbarWidth);
-					$this.addClass('open');
-					menuBtn.addClass('is-active');
-				}
-				function menuClose() { // Закрывание меню
-					body.removeClass('lock').css('padding-right', 0);
-					$this.removeClass('open');
-					menuBtn.removeClass('is-active');
-				}
-				function scrollbarWidthCalc() { // Вычисление ширины скролла
-					var documentWidth = parseInt(document.documentElement.clientWidth),
-							windowsWidth = parseInt(window.innerWidth);
-							scrollbarWidth = windowsWidth - documentWidth;
-				}
-				function toggleOpenMenu() { // Открывание/закрывание меню
-					if ($this.hasClass('open')) {
-						menuClose();
-					}else {
-						menuOpen();
+					id = $this.data('id'),
+					dropBlock = $(id),
+					close = dropBlock.find('.menu__close');
+				$this.on('click', function () {
+					$this.toggleClass('active');
+					dropBlock.toggleClass('open');
+				});
+				$(document).mouseup(function (e) {
+					if (!dropBlock.is(e.target) && dropBlock.has(e.target).length === 0 && !$this.is(e.target) && $this.has(e.target).length === 0) {
+						$this.removeClass('active');
+						dropBlock.removeClass('open');
 					}
-				}
-				scrollbarWidthCalc();
-				$(window).resize(scrollbarWidthCalc);
-			})
-		};
-	};
-	myMenu($('.js-menu'));
+				});
+				close.on('click', function () {
+					$this.removeClass('active');
+					dropBlock.removeClass('open');
+				})
+			});
+		}
+	}
+	dropClick($('.js-drop-click'));
 
 	// // Блок с высотой окна браузера
 	// function screenHeight(fullHeight) {
@@ -519,22 +504,22 @@ $(document).ready(function () {
 	// textLimit();
 
 	// // Вставляет svg в html, позволяет управлять svg через css 
-	// $('img[src$=".svg"]').each(function(){
-	// 	var $img = $(this);
-	// 	var imgClass = $img.attr('class');
-	// 	var imgURL = $img.attr('src');
-	// 	$.get(imgURL, function(data) {
-	// 		var $svg = $(data).find('svg');
-	// 		if(typeof imgClass !== 'undefined') {
-	// 			$svg = $svg.attr('class', imgClass+' replaced-svg');
-	// 		}
-	// 		$svg = $svg.removeAttr('xmlns:a');
-	// 		if(!$svg.attr('viewBox') && $svg.attr('height') && $svg.attr('width')) {
-	// 			$svg.attr('viewBox', '0 0 ' + $svg.attr('height') + ' ' + $svg.attr('width'))
-	// 		}
-	// 		$img.replaceWith($svg);
-	// 	}, 'xml');
-	// });
+	$('img[src$=".svg"]').each(function(){
+		var $img = $(this);
+		var imgClass = $img.attr('class');
+		var imgURL = $img.attr('src');
+		$.get(imgURL, function(data) {
+			var $svg = $(data).find('svg');
+			if(typeof imgClass !== 'undefined') {
+				$svg = $svg.attr('class', imgClass+' replaced-svg');
+			}
+			$svg = $svg.removeAttr('xmlns:a');
+			if(!$svg.attr('viewBox') && $svg.attr('height') && $svg.attr('width')) {
+				$svg.attr('viewBox', '0 0 ' + $svg.attr('height') + ' ' + $svg.attr('width'))
+			}
+			$img.replaceWith($svg);
+		}, 'xml');
+	});
 
 	// // Присваивание класса при клике
 	// function clickToggle(block) {
