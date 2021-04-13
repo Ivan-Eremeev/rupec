@@ -35,13 +35,13 @@
     .little-news__title {
       span {
         border-bottom: 1px solid transparent;
-        transition: 0.1s;
+        transition: 0.3s;
       }
     }
     &:hover {
       .little-news__title {
         span {
-          
+          border-color: $black;
         }
       }
     }
