@@ -1,5 +1,5 @@
-mixin comment-news(category,title,time,img)
-  // little-news
+mixin comment-news(category,title,time,img,name,descript)
+  // comment-news
   article.comment-news
     a(href="#") 
       if img
@@ -8,8 +8,8 @@ mixin comment-news(category,title,time,img)
             span.comment-news__sticker мнение
             span.comment-news__avatar.img-responsive
               img(src="img/" + img, alt="")
-            span.comment-news__name Руслан Эдельгериев
-            span.comment-news__descript Советник президента РФ по климату
+            span.comment-news__name= name
+            span.comment-news__descript= descript
       h1.comment-news__title!= title
       time.comment-news__time= time
-  //	/little-news
+  //	/comment-news

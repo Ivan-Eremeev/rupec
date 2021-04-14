@@ -26,12 +26,12 @@ block content
 		include blocks/header.jade
 		
 		.content
-			.container
+			.container.px-0
 
 				section.home-s1
 					.row.row-cols-1.row-cols-lg-3
 						.col
-							+little-news('госрегулирование','“Есть ли жизнь без пластика? ”главное из общения<br>в Clubhouse с главой СИБУР<br>Дмитрием Коновым','4 часа назад')
+							+little-news('госрегулирование','“Есть ли жизнь без пластика? ”главное из общенияв Clubhouse с главой СИБУРДмитрием Коновым','4 часа назад')
 						.col
 							+little-news('Стратегии отрасли','СПП выступил против возобновления пошлинына термопластавтоматы','8 часов назад')
 						.col
@@ -40,9 +40,9 @@ block content
 				section.home-s2
 					.row.row-cols-1.row-cols-md-2.row-cols-lg-3
 						.col
-							+big-news('госрегулирование','“Есть ли жизнь без пластика? ”главное из общения<br>в Clubhouse с главой СИБУР<br>Дмитрием Коновым','4 часа назад','news-thumbnail_1.jpg')
+							+big-news('госрегулирование','“Есть ли жизнь без пластика? ”главное из общенияв Clubhouse с главой СИБУРДмитрием Коновым','4 часа назад','news-thumbnail_1.jpg')
 						.col
-							+comment-news('госрегулирование','“Есть ли жизнь без пластика? ”главное из общения<br>в Clubhouse с главой СИБУР<br>Дмитрием Коновым','4 часа назад','portrait.jpg')
+							+comment-news('госрегулирование','“Есть ли жизнь без пластика? ”главное из общенияв Clubhouse с главой СИБУРДмитрием Коновым','4 часа назад','portrait_1.jpg','Руслан Эдельгериев','Советник президента РФ по климату')
 						.col
 							+big-news('госрегулирование','Биржевая цена на суг обновила исторический максимум','11:25 / 4 МАРТА 2021','news-thumbnail_2.jpg')
 
@@ -54,7 +54,7 @@ block content
 						.col
 							// subscribe
 							form(action="").subscribe
-								.subscribe__title Подпишитесь на нашу e-mail рассылку!<br>Отправляем новости по каждой рубрике один раз в месяц.
+								.subscribe__title Подпишитесь на нашу e-mail рассылку!Отправляем новости по каждой рубрике один раз в месяц.
 								.subscribe__checkboxes
 									.subscribe__row 
 										input#subscribe_1(type="checkbox").subscribe__checkbox
@@ -77,6 +77,52 @@ block content
 							.little-banner
 								img(src="img/banner_1.jpg", alt="")
 							//	/little-banner
+
+				section.home-s5 
+					.row.row-cols-1.row-cols-lg-3
+						.col
+							+little-news('госрегулирование','“Есть ли жизнь без пластика? ”главное из общенияв Clubhouse с главой СИБУРДмитрием Коновым','4 часа назад',true)
+						.col
+							+little-news('эксклюзив rupec','СПП выступил против возобновления пошлинына термопластавтоматы','8 часов назад',true,true)
+						.col
+							+little-news('Стратегии отрасли','Производство натурального каучука в феврале сократилось на 12,4%','вчера',true)
+
+				section.home-s2
+					.row.row-cols-1.row-cols-md-2.row-cols-lg-3
+						.col
+							+big-news('госрегулирование','“Есть ли жизнь без пластика? ”главное из общенияв Clubhouse с главой СИБУРДмитрием Коновым','4 часа назад','news-thumbnail_1.jpg')
+						.col
+							+comment-news('госрегулирование','“Есть ли жизнь без пластика? ”главное из общенияв Clubhouse с главой СИБУРДмитрием Коновым','4 часа назад','portrait_2.jpg','Александр Собко','Аналитик RUPEC')
+						.col
+							// orange-news
+							article.orange-news
+								a(href="#") 
+									h1.orange-news__title “Есть ли жизнь без пластика?”главное из общенияв Clubhouseс главой СИБУР Дмитрием Коновымможно приспособить подчто угодно
+							//	/orange-news
+
+				section.home-s5 
+					.row.row-cols-1.row-cols-lg-3
+						.col
+							+little-news('госрегулирование','“Есть ли жизнь без пластика? ”главное из общенияв Clubhouse с главой СИБУРДмитрием Коновым','4 часа назад',true)
+						.col
+							+little-news('Стратегии отрасли','СПП выступил против возобновления пошлинына термопластавтоматы','8 часов назад',true)
+						.col
+							+little-news('Стратегии отрасли','Производство натурального каучука в феврале сократилось на 12,4%','вчера',true)
+
+				// big-banner
+				.big-banner
+					img(src="img/banner_2.jpg", alt="")
+				//	/big-banner
+
+				section.home-s5 
+					.row.row-cols-1.row-cols-lg-3
+						.col
+							+little-news('госрегулирование','“Есть ли жизнь без пластика? ”главное из общенияв Clubhouse с главой СИБУРДмитрием Коновым','4 часа назад',true)
+						.col
+							+little-news('Стратегии отрасли','СПП выступил против возобновления пошлинына термопластавтоматы','8 часов назад',true)
+						.col
+							+little-news('Стратегии отрасли','Производство натурального каучука в феврале сократилось на 12,4%','вчера',true)
+
 		include blocks/footer.jade
 
 block js-libs

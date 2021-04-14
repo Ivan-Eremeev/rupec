@@ -21,6 +21,7 @@
       padding: 0 30px 25px;
       display: flex;
       flex-direction: column;
+      position: relative;
     }
   }
   &__img {
@@ -78,6 +79,30 @@
     }
     &__text {
       display: none;
+    }
+  }
+  @include media-breakpoint-down(xs) {
+    &__col {
+      &--2 {
+        padding: 0 5% 20px;
+      }
+    }
+    &__category {
+      padding: 14px 20px 10px;
+      margin-bottom: 6px;
+      font-size: 8px;
+    }
+    &__title {
+      font-size: 13px;
+      line-height: 17px;
+      margin-bottom: 0;
+    }
+    &__time {
+      padding: 0 5%;
+      position: absolute;
+      top: 14px;
+      right: 0;
+      font-size: 8px;
     }
   }
 }

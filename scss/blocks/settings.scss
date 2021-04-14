@@ -71,4 +71,13 @@ body {
 .content {
   flex-grow: 1;
 }
+.logo {
+  max-width: 100px;
+  max-height: 30px;
+  margin-right: 10px;
+  flex-shrink: 0;
+}
+.container {
+  overflow: hidden;
+}
 /* /settings */

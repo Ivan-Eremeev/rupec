@@ -1,0 +1,23 @@
+.orange-news {
+  height: 100%;
+  background-color: $orange;
+  box-shadow: $shadow;
+  > a {
+    display: block;
+    height: 100%;
+    padding: 65px 32px;
+  }
+  &__title {
+    font-size: 27px;
+    line-height: 39px;
+    color: #fff;
+  }
+  &:hover {
+    box-shadow: $shadowHov;
+  }
+  @include media-breakpoint-down(lg) {
+    &__title {
+      font-size: 20px;
+    }
+  }
+}
