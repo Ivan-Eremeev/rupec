@@ -17,6 +17,7 @@ block style-libs
 include blocks/little-news.jade
 include blocks/big-news.jade
 include blocks/comment-news.jade
+include blocks/full-news.jade
 
 block content
 
@@ -44,7 +45,38 @@ block content
 							+comment-news('госрегулирование','“Есть ли жизнь без пластика? ”главное из общения<br>в Clubhouse с главой СИБУР<br>Дмитрием Коновым','4 часа назад','portrait.jpg')
 						.col
 							+big-news('госрегулирование','Биржевая цена на суг обновила исторический максимум','11:25 / 4 МАРТА 2021','news-thumbnail_2.jpg')
-			
+
+				section.home-s3
+					+full-news
+
+				section.home-s4 
+					.row.row-cols-1.row-cols-lg-2
+						.col
+							// subscribe
+							form(action="").subscribe
+								.subscribe__title Подпишитесь на нашу e-mail рассылку!<br>Отправляем новости по каждой рубрике один раз в месяц.
+								.subscribe__checkboxes
+									.subscribe__row 
+										input#subscribe_1(type="checkbox").subscribe__checkbox
+										label(for="subscribe_1").subscribe__checkbox-label
+										label(for="subscribe_1").subscribe__text Дайджест новостей
+									.subscribe__row 
+										input#subscribe_2(type="checkbox").subscribe__checkbox
+										label(for="subscribe_2").subscribe__checkbox-label
+										label(for="subscribe_2").subscribe__text Дайджест рубрики "аналитика" за месяц
+									.subscribe__row 
+										input#subscribe_3(type="checkbox").subscribe__checkbox
+										label(for="subscribe_3").subscribe__checkbox-label
+										label(for="subscribe_3").subscribe__text Дайджест блогов активных пользователей сайта
+								.subscribe__input 
+									input(type="text" placeholder="Ваш Email")
+									button(type="submit").subscribe__btn Подписаться
+							//	/subscribe
+						.col
+							// little-banner
+							.little-banner
+								img(src="img/banner_1.jpg", alt="")
+							//	/little-banner
 		include blocks/footer.jade
 
 block js-libs

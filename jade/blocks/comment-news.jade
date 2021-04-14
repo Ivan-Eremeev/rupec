@@ -3,13 +3,13 @@ mixin comment-news(category,title,time,img)
   article.comment-news
     a(href="#") 
       if img
-        .comment-news__img.img-responsive
-          .comment-news__responsive-block
-            .comment-news__sticker мнение
-            .comment-news__avatar.img-responsive
+        span.comment-news__img.img-responsive
+          span.comment-news__responsive-block
+            span.comment-news__sticker мнение
+            span.comment-news__avatar.img-responsive
               img(src="img/" + img, alt="")
-            .comment-news__name Руслан Эдельгериев
-            .comment-news__descript Советник президента РФ по климату
+            span.comment-news__name Руслан Эдельгериев
+            span.comment-news__descript Советник президента РФ по климату
       h1.comment-news__title!= title
       time.comment-news__time= time
   //	/little-news
