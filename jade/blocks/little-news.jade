@@ -14,7 +14,7 @@ mixin little-news(category,title,time,pink,exclusive)
     article.little-news.little-news--white
       a(href="#") 
         span.little-news__category= category
-        h1.little-news__title
+        h2.little-news__title
           span!= title
-        time.little-news__time= time
+        time(datetime="01.01.01").little-news__time= time
   //	/little-news
