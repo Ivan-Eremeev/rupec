@@ -99,18 +99,19 @@
     &__content {
       height: auto;
       display: block;
-      padding-left: 80px;
+      padding: 20px 0 20px 60px;
       position: relative;
     }
     &__sticker {
       padding: 14px 20px 10px;
       margin-bottom: 6px;
       font-size: 8px;
-      top: -25px;
+      top: -43px;
     }
     &__title {
       display: block;
-      padding: 0 5%;
+      padding-left: 0;
+      padding-right: 0;
       font-size: 13px;
       line-height: 17px;
       margin-bottom: 0;
@@ -122,7 +123,7 @@
       padding: 0 5%;
     }
     &__img {
-      padding-top: 25px;
+      padding-top: 43px;
       margin-bottom: 0;
       &:after {
         display: none;
@@ -148,7 +149,7 @@
     &__avatar {
       width: 44px;
       position: absolute;
-      left: 5%;
+      left: 0;
       top: 50%;
       transform: translate(0,-50%);
       margin-bottom: 0;

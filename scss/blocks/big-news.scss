@@ -18,7 +18,9 @@
     padding-bottom: 20px;
   }
   &__img {
-    display: block;
+    img {
+      object-position: top center;
+    }
     &:after {
       padding-top: 64%;
     }

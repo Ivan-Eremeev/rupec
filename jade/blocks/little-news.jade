@@ -7,14 +7,14 @@ mixin little-news(category,title,time,pink,exclusive)
           .little-news__category.little-news__category--exclusive= category
         else
           .little-news__category= category
-        h1.little-news__title
-          != title
+        h2.little-news__title
+          span!= title
         .little-news__time= time
   else 
     article.little-news.little-news--white
       a(href="#") 
         .little-news__category= category
         h2.little-news__title
-          != title
+          span!= title
         .little-news__time= time
   //	/little-news

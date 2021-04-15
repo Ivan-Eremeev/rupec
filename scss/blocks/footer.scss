@@ -33,6 +33,9 @@
       padding: 10px 0;
       color: $black;
       white-space: nowrap;
+      &:hover {
+        color: $blue;
+      }
     }  
   }
   &__copyright {
