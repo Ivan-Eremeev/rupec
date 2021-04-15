@@ -2,9 +2,6 @@
   margin-top: 76px;
   background-color: #fff;
   box-shadow: $shadow;
-  .logo {
-    margin-bottom: 30px;
-  }
   &__top {
     display: flex;
     justify-content: space-between;
@@ -21,7 +18,6 @@
   }
   &__menu {
     padding-right: 25px;
-    margin-bottom: 30px;
   }
   &__list {
     display: flex;
@@ -40,14 +36,27 @@
     }  
   }
   &__copyright {
+    span {
+    }
   }
   @include media-breakpoint-down(sm) {
+    margin-top: 50px;
+    &__top {
+      padding: 30px 0 15px;
+      border-bottom: none;
+    }
+    &__bottom {
+      padding: 15px 0 30px;
+    }
     &__copyright {
-      order: 2;
-      margin-top: 30px;
+      font-size: 8px;
+      line-height: 12px;
+      span {
+        display: block;
+      }
     }
     &__menu {
-      // display: none;
+      padding-right: 0;
     }
     &__list {
       font-size: 8px;

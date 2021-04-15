@@ -84,4 +84,9 @@
       line-height: 17px;
     }
   }
+  @include media-breakpoint-down(xs) {
+    &__checkboxes {
+      margin-bottom: 34px;
+    }
+  }
 }

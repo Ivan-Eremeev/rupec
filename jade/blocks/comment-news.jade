@@ -6,10 +6,12 @@ mixin comment-news(category,title,time,img,name,descript)
         span.comment-news__img.img-responsive
           span.comment-news__responsive-block
             span.comment-news__sticker мнение
-            span.comment-news__avatar.img-responsive
-              img(src="img/" + img, alt="")
-            span.comment-news__name= name
-            span.comment-news__descript= descript
-      h1.comment-news__title!= title
+            span.comment-news__title.mobile-visible!= title
+            span.comment-news__content
+              span.comment-news__avatar.img-responsive
+                img(src="img/" + img, alt="")
+              span.comment-news__name= name
+              span.comment-news__descript= descript
+      h1.comment-news__title.mobile-hide!= title
       time.comment-news__time= time
   //	/comment-news

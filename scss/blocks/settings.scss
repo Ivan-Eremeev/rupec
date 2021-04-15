@@ -23,12 +23,12 @@ body {
   }
 }
 .mobile-hide {
-  @include media-breakpoint-down(sm) {
+  @include media-breakpoint-down(xs) {
     display: none !important;
   }
 }
 .mobile-visible {
-  @include media-breakpoint-down(sm) {
+  @include media-breakpoint-up(sm) {
     display: none !important;
   }
 }
