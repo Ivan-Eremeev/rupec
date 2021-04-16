@@ -28,100 +28,13 @@ block content
 		.content
 			.container.px-0
 
-				.home-s1
-					.row.row-cols-1.row-cols-lg-3
-						.col
-							+little-news('госрегулирование','“Есть ли жизнь без пластика? ”главное из общенияв Clubhouse с главой СИБУРДмитрием Коновым','4 часа назад')
-						.col
-							+little-news('Стратегии отрасли','СПП выступил против возобновления пошлинына термопластавтоматы','8 часов назад')
-						.col
-							+little-news('Стратегии отрасли','Производство натурального каучука в феврале сократилось на 12,4%','вчера')
+				.title Навигация по страницам
 
-				.home-s2
-					.row.row-cols-1.row-cols-md-2.row-cols-lg-3
-						.col
-							+big-news('госрегулирование','“Есть ли жизнь без пластика? ”главное из общенияв Clubhouse с главой СИБУРДмитрием Коновым','4 часа назад','news-thumbnail_1.jpg')
-						.col
-							+comment-news('госрегулирование','“Есть ли жизнь без пластика? ”главное из общенияв Clubhouse с главой СИБУРДмитрием Коновым','4 часа назад','portrait_1.jpg','Руслан Эдельгериев','Советник президента РФ по климату')
-						.col
-							+big-news('госрегулирование','Биржевая цена на суг обновила исторический максимум','11:25 / 4 МАРТА 2021','news-thumbnail_2.jpg')
-
-				.home-s3
-					+full-news
-
-				.home-s4 
-					.row.row-cols-1.row-cols-lg-2
-						.col
-							// subscribe
-							form(action="#").subscribe
-								.subscribe__title Подпишитесь на нашу e-mail рассылку!Отправляем новости по каждой рубрике один раз в месяц.
-								.subscribe__checkboxes
-									.subscribe__row 
-										input#subscribe_1(type="checkbox").subscribe__checkbox
-										label(for="subscribe_1").subscribe__checkbox-label
-										label(for="subscribe_1").subscribe__text Дайджест новостей
-									.subscribe__row 
-										input#subscribe_2(type="checkbox").subscribe__checkbox
-										label(for="subscribe_2").subscribe__checkbox-label
-										label(for="subscribe_2").subscribe__text Дайджест рубрики "аналитика" за месяц
-									.subscribe__row 
-										input#subscribe_3(type="checkbox").subscribe__checkbox
-										label(for="subscribe_3").subscribe__checkbox-label
-										label(for="subscribe_3").subscribe__text Дайджест блогов активных пользователей сайта
-								.subscribe__input 
-									input(type="text" placeholder="Ваш Email")
-									button(type="submit").subscribe__btn Подписаться
-							//	/subscribe
-						.col
-							// little-banner
-							.little-banner
-								img(src="img/banner_1.jpg", alt="")
-							//	/little-banner
-
-				.home-s5 
-					.row.row-cols-1.row-cols-lg-3
-						.col
-							+little-news('госрегулирование','“Есть ли жизнь без пластика? ”главное из общенияв Clubhouse с главой СИБУРДмитрием Коновым','4 часа назад',true)
-						.col
-							+little-news('эксклюзив rupec','СПП выступил против возобновления пошлинына термопластавтоматы','8 часов назад',true,true)
-						.col
-							+little-news('Стратегии отрасли','Производство натурального каучука в феврале сократилось на 12,4%','вчера',true)
-
-				.home-s2
-					.row.row-cols-1.row-cols-md-2.row-cols-lg-3
-						.col
-							+big-news('госрегулирование','“Есть ли жизнь без пластика? ”главное из общенияв Clubhouse с главой СИБУРДмитрием Коновым','4 часа назад','news-thumbnail_1.jpg')
-						.col
-							+comment-news('госрегулирование','“Есть ли жизнь без пластика? ”главное из общенияв Clubhouse с главой СИБУРДмитрием Коновым','4 часа назад','portrait_2.jpg','Александр Собко','Аналитик RUPEC')
-						.col
-							// orange-news
-							article.orange-news
-								a(href="#") 
-									h1.orange-news__title “Есть ли жизнь без пластика?”главное из общения в Clubhouseс главой СИБУР Дмитрием Коновым можно приспособить под что угодно
-							//	/orange-news
-
-				.home-s5 
-					.row.row-cols-1.row-cols-lg-3
-						.col
-							+little-news('госрегулирование','“Есть ли жизнь без пластика? ”главное из общенияв Clubhouse с главой СИБУРДмитрием Коновым','4 часа назад',true)
-						.col
-							+little-news('Стратегии отрасли','СПП выступил против возобновления пошлинына термопластавтоматы','8 часов назад',true)
-						.col
-							+little-news('Стратегии отрасли','Производство натурального каучука в феврале сократилось на 12,4%','вчера',true)
-
-				// big-banner
-				.big-banner
-					img(src="img/banner_2.jpg", alt="")
-				//	/big-banner
-
-				.home-s5 
-					.row.row-cols-1.row-cols-lg-3
-						.col
-							+little-news('госрегулирование','“Есть ли жизнь без пластика? ”главное из общенияв Clubhouse с главой СИБУРДмитрием Коновым','4 часа назад',true)
-						.col
-							+little-news('Стратегии отрасли','СПП выступил против возобновления пошлинына термопластавтоматы','8 часов назад',true)
-						.col
-							+little-news('Стратегии отрасли','Производство натурального каучука в феврале сократилось на 12,4%','вчера',true)
+				ul.pagenav 
+					li 
+						a(href="home.html") Главная
+					li 
+						a(href="home-header_v2.html") Главная (шапка вариант 2)
 
 		include blocks/footer.jade
 

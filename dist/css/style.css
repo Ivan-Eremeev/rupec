@@ -8273,6 +8273,42 @@ body {
 .container {
   overflow: hidden; }
 
+.title {
+  font-size: 31px;
+  line-height: 43px;
+  font-weight: bold; }
+
+.pagenav {
+  font-size: 16px; }
+  .pagenav li {
+    margin: 10px 0; }
+  .pagenav a {
+    color: #000; }
+
+.btn {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  padding: 6px 24px;
+  font-size: 13px;
+  font-weight: 500;
+  border: none;
+  outline: none;
+  border-radius: 0; }
+  .btn--blue {
+    background-color: #2073BA;
+    border: 1px solid transparent;
+    color: #fff; }
+    .btn--blue:hover {
+      color: #fff;
+      background-color: #3386CD; }
+
 /* /settings */
 /*!
  * Hamburgers
@@ -8437,8 +8473,17 @@ body {
       -webkit-transition: 0.2s;
       -o-transition: 0.2s;
       transition: 0.2s; }
-      .header__list a:hover {
+      .header__list a.blue:hover {
         background-color: #2073BA;
+        color: #fff; }
+      .header__list a.green:hover {
+        background-color: #009FA6;
+        color: #fff; }
+      .header__list a.orange:hover {
+        background-color: #F57B20;
+        color: #fff; }
+      .header__list a.gray:hover {
+        background-color: #C4C4C4;
         color: #fff; }
   .header__search-icon {
     display: none; }
@@ -8644,6 +8689,9 @@ body {
       object-fit: cover; }
     .userblock__photo:hover {
       border-color: #F57B20; }
+  .userblock .btn {
+    height: 27px;
+    padding: 0 24px; }
   @media (max-width: 1299.98px) {
     .userblock {
       display: none; } }
@@ -8699,6 +8747,7 @@ body {
     padding: 20px 20px 10px;
     margin-bottom: 5px;
     font-size: 12px;
+    font-weight: 500;
     background-color: #2073BA;
     color: #fff;
     text-transform: uppercase; }
@@ -8713,25 +8762,18 @@ body {
     -webkit-box-flex: 1;
     -ms-flex-positive: 1;
     flex-grow: 1; }
+    .little-news__title span {
+      border-bottom: 1px solid transparent;
+      -webkit-transition: 0.3s;
+      -o-transition: 0.3s;
+      transition: 0.3s; }
   .little-news__time {
     padding: 0 30px;
     font-size: 12px;
     color: #2073BA;
     text-transform: uppercase; }
-  .little-news--white .little-news__title span {
-    border-bottom: 1px solid transparent;
-    -webkit-transition: 0.3s;
-    -o-transition: 0.3s;
-    transition: 0.3s; }
-  .little-news--white:hover .little-news__title span {
+  .little-news:hover .little-news__title span {
     border-color: #000; }
-  .little-news--pink {
-    background-color: #FFE5E5;
-    -webkit-transition: 0.5s;
-    -o-transition: 0.5s;
-    transition: 0.5s; }
-    .little-news--pink:hover {
-      background-color: #fff; }
   @media (max-width: 575.98px) {
     .little-news__category {
       padding: 14px 20px 10px;
@@ -8760,6 +8802,13 @@ body {
   -o-transition: 0.5s;
   transition: 0.5s; }
   .big-news > a {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
     color: #000;
     height: 100%; }
   .big-news:hover {
@@ -8774,18 +8823,25 @@ body {
     -ms-flex-direction: column;
     flex-direction: column;
     position: relative;
+    -webkit-box-flex: 1;
+    -ms-flex-positive: 1;
+    flex-grow: 1;
     padding-bottom: 20px; }
-  .big-news__img img {
-    -o-object-position: top center;
-    object-position: top center; }
-  .big-news__img:after {
-    padding-top: 64%; }
+  .big-news__img {
+    -ms-flex-negative: 0;
+    flex-shrink: 0; }
+    .big-news__img img {
+      -o-object-position: top center;
+      object-position: top center; }
+    .big-news__img:after {
+      padding-top: 64%; }
   .big-news__category {
     -ms-flex-item-align: start;
     align-self: flex-start;
     padding: 20px 20px 10px;
     margin-bottom: 18px;
     font-size: 12px;
+    font-weight: 500;
     background-color: #2073BA;
     color: #fff;
     text-transform: uppercase; }
@@ -8860,15 +8916,6 @@ body {
     left: 0;
     width: 100%;
     height: 100%; }
-  .comment-news__category {
-    -ms-flex-item-align: start;
-    align-self: flex-start;
-    padding: 20px 20px 10px;
-    margin-bottom: 18px;
-    font-size: 12px;
-    background-color: #2073BA;
-    color: #fff;
-    text-transform: uppercase; }
   .comment-news__title {
     padding: 0 30px;
     margin-bottom: 50px;
@@ -8885,13 +8932,16 @@ body {
     font-size: 12px;
     color: #2073BA;
     text-transform: uppercase; }
-  .comment-news__sticker {
+  .comment-news__category {
     padding: 20px 20px 10px;
     background-color: #F57B20;
     color: #fff;
+    font-size: 12px;
+    font-weight: 500;
     position: absolute;
     top: 0;
-    left: 0; }
+    left: 0;
+    text-transform: uppercase; }
   .comment-news__avatar {
     width: 40%;
     border: 3px solid #F57B20;
@@ -8903,8 +8953,9 @@ body {
     .comment-news__avatar:after {
       padding-top: 100%; }
   .comment-news__name {
-    font-size: 22px;
-    font-weight: bold; }
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 7px; }
   .comment-news__descript {
     font-weight: 500; }
   .comment-news__content {
@@ -8933,7 +8984,7 @@ body {
       display: block;
       padding: 20px 0 20px 60px;
       position: relative; }
-    .comment-news__sticker {
+    .comment-news__category {
       padding: 14px 20px 10px;
       margin-bottom: 6px;
       font-size: 8px;
@@ -9029,6 +9080,7 @@ body {
     margin-left: -30px;
     margin-bottom: 18px;
     font-size: 12px;
+    font-weight: 500;
     background-color: #2073BA;
     color: #fff;
     text-transform: uppercase; }
@@ -9095,7 +9147,7 @@ body {
   .subscribe__title {
     max-width: 430px;
     font-size: 17px;
-    font-weight: bold;
+    font-weight: 600;
     line-height: 25px;
     margin-bottom: 35px; }
   .subscribe__row {
@@ -9225,6 +9277,7 @@ body {
   .orange-news__title {
     font-size: 27px;
     line-height: 39px;
+    font-weight: 600;
     color: #fff; }
   .orange-news:hover {
     -webkit-box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);

@@ -28,15 +28,6 @@
     width: 100%;
     height: 100%;
   }
-  &__category {
-    align-self: flex-start;
-    padding: 20px 20px 10px;
-    margin-bottom: 18px;
-    font-size: 12px;
-    background-color: $blue;
-    color: #fff;
-    text-transform: uppercase;
-  }
   &__title {
     padding: 0 30px;
     margin-bottom: 50px;
@@ -54,13 +45,16 @@
     color: $blue;
     text-transform: uppercase;
   }
-  &__sticker {
+  &__category {
     padding: 20px 20px 10px;
     background-color: $orange;
     color: #fff;
+    font-size: 12px;
+    font-weight: 500;
     position: absolute;
     top: 0;
     left: 0;
+    text-transform: uppercase;
   }
   &__avatar {
     width: 40%;
@@ -74,8 +68,9 @@
     }
   }
   &__name {
-    font-size: 22px;
+    font-size: 18px;
     font-weight: bold;
+    margin-bottom: 7px;
   }
   &__descript {
     font-weight: 500;
@@ -102,7 +97,7 @@
       padding: 20px 0 20px 60px;
       position: relative;
     }
-    &__sticker {
+    &__category {
       padding: 14px 20px 10px;
       margin-bottom: 6px;
       font-size: 8px;

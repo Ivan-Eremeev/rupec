@@ -27,10 +27,30 @@
 			padding: 30px 17px 35px;
       color: $blue;
       transition: 0.2s;
-      &:hover {
-				background-color: $blue;
-				color: #fff;
-			}
+      &.blue {
+        &:hover {
+          background-color: $blue;
+          color: #fff;
+        }
+      }
+      &.green {
+        &:hover {
+          background-color: $green;
+          color: #fff;
+        }
+      }
+      &.orange {
+        &:hover {
+          background-color: $orange;
+          color: #fff;
+        }
+      }
+      &.gray {
+        &:hover {
+          background-color: #C4C4C4;
+          color: #fff;
+        }
+      }
     }
   }
   &__search-icon {

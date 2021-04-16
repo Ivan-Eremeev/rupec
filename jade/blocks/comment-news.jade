@@ -4,7 +4,7 @@ mixin comment-news(category,title,time,img,name,descript)
     a(href="#") 
       .comment-news__img.img-responsive
         .comment-news__responsive-block
-          .comment-news__sticker мнение
+          .comment-news__category= category
           .comment-news__title.mobile-visible!= title
           .comment-news__content
             .comment-news__avatar.img-responsive

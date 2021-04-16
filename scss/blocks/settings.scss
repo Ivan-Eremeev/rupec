@@ -80,4 +80,38 @@ body {
 .container {
   overflow: hidden;
 }
+.title {
+  font-size: 31px;
+  line-height: 43px;
+  font-weight: bold;
+}
+.pagenav {
+  font-size: 16px;
+  li {
+    margin: 10px 0;
+  }
+  a {
+    color: $black;
+  }
+}
+.btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 6px 24px;
+  font-size: 13px;
+  font-weight: 500;
+  border: none;
+  outline: none;
+  border-radius: 0;
+  &--blue {
+    background-color: $blue;
+    border: 1px solid transparent;
+    color: #fff;
+    &:hover {
+      color: #fff;
+      background-color: #3386CD;
+    }
+  }
+}
 /* /settings */

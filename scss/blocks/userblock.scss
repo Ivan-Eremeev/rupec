@@ -83,6 +83,10 @@
       border-color: $orange;
     }
   }
+  .btn {
+    height: 27px;
+    padding: 0 24px;
+  }
   @include media-breakpoint-down(lg) {
     display: none;
   }
