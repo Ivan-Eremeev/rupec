@@ -8284,6 +8284,8 @@ body {
     margin: 10px 0; }
   .pagenav a {
     color: #000; }
+    .pagenav a:hover {
+      color: #2073BA; }
 
 .btn {
   display: -webkit-box;
