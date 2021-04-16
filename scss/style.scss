@@ -15,7 +15,7 @@ $container-max-widths: ( // Максимальная ширина контейн
   sm: 540px, 
   md: 720px, 
   lg: 960px, 
-  xl: 1240px);
+  xl: 1220px);
 $gutter: $grid-gutter-width; // Переменная для задания отступов равных междуколоночным
 
 @import 'bootstrap/bootstrap'; // Подключение бутстрап

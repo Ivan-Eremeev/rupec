@@ -46,7 +46,7 @@
     text-transform: uppercase;
   }
   &__category {
-    padding: 20px 20px 10px;
+    padding: 20px 20px 10px 30px;
     background-color: $orange;
     color: #fff;
     font-size: 12px;
@@ -98,7 +98,7 @@
       position: relative;
     }
     &__category {
-      padding: 14px 20px 10px;
+      padding: 14px 20px 10px 5%;
       margin-bottom: 6px;
       font-size: 8px;
       top: -43px;
